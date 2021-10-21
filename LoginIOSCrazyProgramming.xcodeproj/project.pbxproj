@@ -13,6 +13,7 @@
 		E941C2BD271ECFA9009BF3C6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E941C2BC271ECFA9009BF3C6 /* Preview Assets.xcassets */; };
 		E941C2C8271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E941C2C7271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingTests.swift */; };
 		E941C2D3271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E941C2D2271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingUITests.swift */; };
+		E9A87391272164B300857697 /* UserListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A87390272164B300857697 /* UserListPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		E941C2CE271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginIOSCrazyProgrammingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E941C2D2271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginIOSCrazyProgrammingUITests.swift; sourceTree = "<group>"; };
 		E941C2D4271ECFA9009BF3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9A87390272164B300857697 /* UserListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				E941C2B9271ECFA9009BF3C6 /* Assets.xcassets */,
 				E941C2BE271ECFA9009BF3C6 /* Info.plist */,
 				E941C2BB271ECFA9009BF3C6 /* Preview Content */,
+				E9A87390272164B300857697 /* UserListPage.swift */,
 			);
 			path = LoginIOSCrazyProgramming;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E941C2B8271ECFA8009BF3C6 /* ContentView.swift in Sources */,
+				E9A87391272164B300857697 /* UserListPage.swift in Sources */,
 				E941C2B6271ECFA8009BF3C6 /* LoginIOSCrazyProgrammingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

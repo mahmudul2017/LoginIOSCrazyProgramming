@@ -14,20 +14,24 @@ struct ContentView: View {
     @State private var password : String = ""
     
     var body: some View {
-        VStack {
-            loginText()
-            
-            loginImage()
-            
-            loginUsername(username: $username)
-            
-            loginPassword(password: $password)
-            
-            Button(action: {print("Login Called!")}) {
-                loginClick()
+        NavigationView {
+            VStack {
+                loginText()
+                
+                loginImage()
+                
+                loginUsername(username: $username)
+                
+                loginPassword(password: $password)
+                
+                Button(action: {print("Login Called!")}) {
+                    NavigationLink(destination: UserListPage()) {
+                        loginClick()
+                    }
+                }
             }
+            .padding()
         }
-        .padding()
     }
 }
 
