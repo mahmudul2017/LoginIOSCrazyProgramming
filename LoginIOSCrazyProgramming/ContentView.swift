@@ -10,6 +10,8 @@ import SwiftUI
 let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0)
 
 struct ContentView: View {
+    @State private var presentingToast: Bool = false
+    
     @State private var username : String = ""
     @State private var password : String = ""
     
@@ -28,8 +30,7 @@ struct ContentView: View {
                     NavigationLink(destination: UserListPage()) {
                         loginClick()
                     }
-                }
-            }
+                }}
             .padding()
         }
     }
