@@ -18,29 +18,13 @@ struct BindingView: View {
             Spacer()
             Spacer()
 
-            Text("\(self.textChanger)")
-                .padding()
+            changerText(textChanger: $textChanger)
 
-            Text(textCheck)
-                .padding(EdgeInsets.init(top: 0, leading: 32, bottom: 48, trailing: 32))
+            checkText(textCheck: $textCheck)
 
-            Button(action: {self.textChanger = "Binding Level 1 Disable!"}, label: {
-                Text("Binding Level 1")
-            })
-            .padding(EdgeInsets.init(top: 12, leading: 24, bottom: 12, trailing: 24))
-            .foregroundColor(.white)
-            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+            bindingButton1(textChanger: $textChanger)
 
-            Button(action: {self.isVisible.toggle()}, label: {
-                Text("Binding Level 2")
-            })
-            .padding(EdgeInsets.init(top: 12, leading: 24, bottom: 12, trailing: 24))
-            .foregroundColor(.white)
-            .background(Color.green)
-
-            if isVisible {
-                Text(self.textCheck)
-            }
+            bindingButton2(isVisible: $isVisible, textCheck: $textCheck)
             
             Spacer()
             Spacer()
@@ -51,5 +35,55 @@ struct BindingView: View {
 struct BindingView_Previews: PreviewProvider {
     static var previews: some View {
         BindingView()
+    }
+}
+
+struct changerText: View {
+    @Binding var textChanger: String
+    
+    var body: some View {
+        Text("\(self.textChanger)")
+            .padding()
+    }
+}
+
+struct checkText: View {
+    @Binding var textCheck: String
+    
+    var body: some View {
+        Text(textCheck)
+            .padding(EdgeInsets.init(top: 0, leading: 32, bottom: 48, trailing: 32))
+    }
+}
+
+struct bindingButton1: View {
+    @Binding var textChanger: String
+    
+    var body: some View {
+        Button(action: {self.textChanger = "Binding Level 1 Disable!"}, label: {
+            Text("Binding Level 1")
+        })
+        .padding(EdgeInsets.init(top: 12, leading: 24, bottom: 12, trailing: 24))
+        .foregroundColor(.white)
+        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct bindingButton2: View {
+    @Binding var isVisible: Bool
+    @Binding var textCheck: String
+    
+    var body: some View {
+        Button(action: {self.isVisible.toggle(); self.textCheck = "Ok"}, label: {
+            Text("Binding Level 2")
+        })
+        .padding(EdgeInsets.init(top: 12, leading: 24, bottom: 12, trailing: 24))
+        .foregroundColor(.white)
+        .background(Color.green)
+        
+        if isVisible {
+            //self.textCheck = "Binding Level 2 Disable!"
+            Text(self.textCheck)
+        }
     }
 }
