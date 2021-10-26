@@ -12,6 +12,10 @@ struct BindingView: View {
     @State private var textCheck: String = "Text Check"
     @State private var isVisible: Bool = false
     
+    //@State private var genderMale: String = "Male"
+    //@State private var genderFemale: String = "Female"
+    @State private var genderType: String = "Male"
+    
     var body: some View {
         VStack {
             Spacer()
@@ -25,6 +29,8 @@ struct BindingView: View {
             bindingButton1(textChanger: $textChanger)
 
             bindingButton2(isVisible: $isVisible, textCheck: $textCheck)
+            
+            checkboxFieldView(genderType: $genderType)
             
             Spacer()
             Spacer()
@@ -85,5 +91,56 @@ struct bindingButton2: View {
             //self.textCheck = "Binding Level 2 Disable!"
             Text(self.textCheck)
         }
+    }
+}
+
+struct checkboxFieldView : View {
+    @State var checkState:Bool = false
+    //@State var genderMale: String
+    //@State var genderFemale: String
+    @Binding var genderType: String
+
+     var body: some View {
+         Spacer()
+        
+         Text("Select Gender Type ?")
+            .foregroundColor(.red)
+        
+         Button(action: {
+                    self.checkState = !self.checkState;
+                    self.genderType = "Male";
+                    
+                    print("State : \(self.checkState)")}) {
+                    HStack(alignment: .top, spacing: 10) {
+
+                    Rectangle()
+                            .fill(self.checkState ? Color.green : Color.red)
+                            .frame(width:20, height:20, alignment: .center)
+                            .cornerRadius(5)
+
+                       Text("Male")
+                    .foregroundColor(.green)
+            }
+        }
+        .foregroundColor(Color.white)
+        
+        Button(action: {
+                self.checkState = !self.checkState;
+                self.genderType = "Female"
+               print("State : \(self.checkState)")}) {
+                 HStack(alignment: .top, spacing: 10) {
+
+                  Rectangle()
+                           .fill(self.checkState ? Color.green : Color.red)
+                           .frame(width:20, height:20, alignment: .center)
+                           .cornerRadius(5)
+
+                     Text("Female")
+                   .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+           }
+       }
+       .foregroundColor(Color.white)
+        
+        Text("Select : \(self.genderType)")
     }
 }

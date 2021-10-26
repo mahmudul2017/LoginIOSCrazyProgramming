@@ -15,7 +15,19 @@ struct UserListPage: View {
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
                 }
-            }
+                
+                NavigationLink(destination: ContactsList()) {
+                    Text("ListView Example")
+                        .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
+                        .background(Color.yellow)
+                }
+                
+                NavigationLink(destination: JsonParseView()) {
+                    Text("Json Parse Example")
+                        .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
+                        .background(Color.yellow)
+                }
+        }
     }
 }
 

@@ -16,6 +16,10 @@
 		E95F46AE27267E94005556CF /* BindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F46AD27267E94005556CF /* BindingView.swift */; };
 		E9A87391272164B300857697 /* UserListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A87390272164B300857697 /* UserListPage.swift */; };
 		E9A8739727216AA200857697 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8739627216AA200857697 /* UserModel.swift */; };
+		E9EAC0032727C7D3003C6201 /* ContactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EAC0022727C7D3003C6201 /* ContactsList.swift */; };
+		E9EAC0082727C919003C6201 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EAC0072727C919003C6201 /* Contacts.swift */; };
+		E9EAC00D2727E1D8003C6201 /* ContactsDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EAC00C2727E1D8003C6201 /* ContactsDetails.swift */; };
+		E9EAC0132727F7F6003C6201 /* JsonParseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EAC0122727F7F6003C6201 /* JsonParseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		E95F46AD27267E94005556CF /* BindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingView.swift; sourceTree = "<group>"; };
 		E9A87390272164B300857697 /* UserListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPage.swift; sourceTree = "<group>"; };
 		E9A8739627216AA200857697 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		E9EAC0022727C7D3003C6201 /* ContactsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsList.swift; sourceTree = "<group>"; };
+		E9EAC0072727C919003C6201 /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		E9EAC00C2727E1D8003C6201 /* ContactsDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsDetails.swift; sourceTree = "<group>"; };
+		E9EAC0122727F7F6003C6201 /* JsonParseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 		E941C2B4271ECFA8009BF3C6 /* LoginIOSCrazyProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				E9EAC0112727F788003C6201 /* jsonParse */,
+				E9EABFFE2727C75A003C6201 /* listView */,
 				E95F46AC27267E75005556CF /* bindingAnotation */,
 				E9A8739527216A8400857697 /* model */,
 				E941C2B5271ECFA8009BF3C6 /* LoginIOSCrazyProgrammingApp.swift */,
@@ -151,8 +161,26 @@
 			isa = PBXGroup;
 			children = (
 				E9A8739627216AA200857697 /* UserModel.swift */,
+				E9EAC0072727C919003C6201 /* Contacts.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E9EABFFE2727C75A003C6201 /* listView */ = {
+			isa = PBXGroup;
+			children = (
+				E9EAC0022727C7D3003C6201 /* ContactsList.swift */,
+				E9EAC00C2727E1D8003C6201 /* ContactsDetails.swift */,
+			);
+			path = listView;
+			sourceTree = "<group>";
+		};
+		E9EAC0112727F788003C6201 /* jsonParse */ = {
+			isa = PBXGroup;
+			children = (
+				E9EAC0122727F7F6003C6201 /* JsonParseView.swift */,
+			);
+			path = jsonParse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,9 +314,13 @@
 			files = (
 				E941C2B8271ECFA8009BF3C6 /* ContentView.swift in Sources */,
 				E9A87391272164B300857697 /* UserListPage.swift in Sources */,
+				E9EAC0032727C7D3003C6201 /* ContactsList.swift in Sources */,
 				E95F46AE27267E94005556CF /* BindingView.swift in Sources */,
+				E9EAC0132727F7F6003C6201 /* JsonParseView.swift in Sources */,
 				E9A8739727216AA200857697 /* UserModel.swift in Sources */,
+				E9EAC00D2727E1D8003C6201 /* ContactsDetails.swift in Sources */,
 				E941C2B6271ECFA8009BF3C6 /* LoginIOSCrazyProgrammingApp.swift in Sources */,
+				E9EAC0082727C919003C6201 /* Contacts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
