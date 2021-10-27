@@ -106,23 +106,26 @@ struct checkboxFieldView : View {
          Text("Select Gender Type ?")
             .foregroundColor(.red)
         
-         Button(action: {
-                    self.checkState = !self.checkState;
-                    self.genderType = "Male";
-                    
-                    print("State : \(self.checkState)")}) {
-                    HStack(alignment: .top, spacing: 10) {
+        HStack {
+            Button(action: {
+                       self.checkState = !self.checkState;
+                       self.genderType = "Male";
+                       
+                       print("State : \(self.checkState)")}) {
+                       HStack(alignment: .top, spacing: 10) {
 
-                    Rectangle()
-                            .fill(self.checkState ? Color.green : Color.red)
-                            .frame(width:20, height:20, alignment: .center)
-                            .cornerRadius(5)
+                       Rectangle()
+                               .fill(self.checkState ? Color.green : Color.red)
+                               .frame(width:20, height:20, alignment: .center)
+                               .cornerRadius(5)
 
-                       Text("Male")
-                    .foregroundColor(.green)
-            }
+                       .foregroundColor(.green)
+               }
+           }
+           .foregroundColor(Color.white)
+            
+            Text("Male")
         }
-        .foregroundColor(Color.white)
         
         Button(action: {
                 self.checkState = !self.checkState;

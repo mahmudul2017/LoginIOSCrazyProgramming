@@ -9,12 +9,51 @@ import SwiftUI
 
 struct JsonParseView: View {
     @State private var userList: [ToDoData]?
+    @State var checkState: Bool = false
     
     var body: some View {
         List(userList ?? []) { userListData in
-            Text(userListData.title)
-                .foregroundColor(.gray)
-                .font(.title)
+            
+      HStack (alignment: .center, spacing: 10) {
+         Button(action: {
+            checkState = userListData.completed
+                   
+            print("State : \(self.checkState)")}) {
+            
+            HStack(alignment: .top, spacing: 10) {
+              Rectangle()
+                .fill(self.checkState ? Color.red : Color.green)
+                .frame(width:20, height:20, alignment: .center)
+                .cornerRadius(5)
+                .foregroundColor(.green)
+               }
+            }.foregroundColor(Color.white)
+                
+            // HStack(alignment: .center, spacing: 10) {
+//            Rectangle()
+//                 .fill(userListData.completed ? Color.red : Color.green)
+//                 .frame(width:20, height:20, alignment: .center)
+//                 .cornerRadius(5)
+//                 .foregroundColor(.green)
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text("userId : \(String(userListData.userId))")
+                    .foregroundColor(.gray)
+                    .font(.headline)
+                
+                Text("Id : \(String(userListData.id))")
+                    .foregroundColor(.gray)
+                    .font(.headline)
+                
+                Text("Title : \(userListData.title)")
+                    .foregroundColor(.gray)
+                    .font(.headline)
+                
+                Text("Success : \(userListData.completed.description)")
+                    .foregroundColor(.gray)
+                    .font(.headline)
+                }
+            }
         }
         .onAppear(perform: getApiCall)
         .foregroundColor(.gray)
