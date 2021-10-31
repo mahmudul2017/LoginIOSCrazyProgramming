@@ -11,7 +11,7 @@ struct UserListPage: View {
     var body: some View {
             VStack {
                 NavigationLink(destination: BindingView()) {
-                    Text("Binding Click")
+                    Text("Binding Example")
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
                 }
@@ -27,8 +27,14 @@ struct UserListPage: View {
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
                 }
-        }
-    }
+                
+                NavigationLink(destination: ExtensionUse()) {
+                    Text("Extension Example")
+                        .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
+                        .background(Color.yellow)
+                }
+          }
+     }
 }
 
 struct UserListPage_Previews: PreviewProvider {
