@@ -18,6 +18,8 @@ struct ExtensionUse: View {
         VStack {
             Spacer()
             
+            //SearchViewModel(text: "SearchBar")
+            
             fullNameView(userInfo: $userInfo)
             
             extensionView(userExtension: userExtension)
