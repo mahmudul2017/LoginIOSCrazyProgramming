@@ -8,25 +8,19 @@
 import SwiftUI
 
 struct ExtensionUse: View {
-    //@State private var userInfo: String? = ""
+    @State private var userInfo: String? = ""
     
     var body: some View {
         let user = UserEx(fName: "SwiftUI", lName: "UIKit", age: 22, department: "IOS")
-        let userInfo = user.getUserInfo(fName: user.fName, department: user.department)
+        //let userInfo = user.getUserInfo(fName: user.fName, department: user.department)
         let userExtension = user.getUserExtension()
         
         VStack {
             Spacer()
             
-            Text("\(userInfo)")
-                .padding()
-                .font(Font.body)
-                .foregroundColor(.red)
+            fullNameView(userInfo: $userInfo)
             
-            Text("\(userExtension)")
-                .padding()
-                .font(Font.body)
-                .foregroundColor(.purple)
+            extensionView(userExtension: userExtension)
             
           HStack {
             fNameView(fName: user.fName)
@@ -34,17 +28,10 @@ struct ExtensionUse: View {
             lNameView(lName: user.lName)
             
             ageView(age: user.age)
-        }
             
-            Button(action: {
-                
-            }, label: {
-                Text("Extension")
-                    .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .font(.title2)
-            })
+          }
+            
+            extensionClick(userInfo: $userInfo, user: user)
             
             Spacer()
             Spacer()
@@ -88,5 +75,44 @@ struct ageView: View {
             .padding()
             .foregroundColor(.purple)
             .font(.title3)
+    }
+}
+
+struct fullNameView: View {
+    @Binding var userInfo: String?
+    
+    var body: some View {
+        Text("\(userInfo ?? "")")
+            .padding()
+            .font(Font.body)
+            .foregroundColor(.red)
+    }
+}
+
+struct extensionView: View {
+    var userExtension: String
+    
+    var body: some View {
+        Text("\(userExtension)")
+            .padding()
+            .font(Font.body)
+            .foregroundColor(.purple)
+    }
+}
+
+struct extensionClick: View {
+    @Binding var userInfo: String?
+    var user: UserEx
+    
+    var body: some View {
+        Button(action: {
+            userInfo = user.getUserInfo(fName: user.fName, department: user.department)
+        }, label: {
+            Text("Extension")
+                .padding()
+                .background(Color.green)
+                .foregroundColor(.white)
+                .font(.title2)
+        })
     }
 }

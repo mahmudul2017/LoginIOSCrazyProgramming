@@ -22,7 +22,7 @@ struct UserEx {
     }
     
     func getUserInfo(fName: String, department: String) -> String {
-          fName + department
+          fName + " ~ " + department
     }
     
     func getUserAge(age: Int) -> String {
