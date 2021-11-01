@@ -14,24 +14,35 @@ struct UserListPage: View {
                     Text("Binding Example")
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
                 
                 NavigationLink(destination: ContactsList()) {
                     Text("ListView Example")
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
                 
                 NavigationLink(destination: JsonParseView()) {
                     Text("Json Parse Example")
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
                 
                 NavigationLink(destination: ExtensionUse()) {
                     Text("Extension Example")
                         .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
                         .background(Color.yellow)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                }
+                
+                NavigationLink(destination: SharedPrefView()) {
+                    Text("SharedPref Example")
+                        .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
+                        .background(Color.yellow)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
           }
      }
