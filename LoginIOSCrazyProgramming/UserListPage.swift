@@ -58,6 +58,13 @@ struct UserListPage: View {
                         .background(Color.yellow)
                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                 }
+                
+                NavigationLink(destination: EnvironmentObjectView()) {
+                    Text("EnvironmentObject Property")
+                        .padding(EdgeInsets.init(top: 12, leading: 36, bottom: 12, trailing: 36))
+                        .background(Color.yellow)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                }
           }
      }
 }
