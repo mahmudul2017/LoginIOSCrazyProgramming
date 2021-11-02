@@ -70,7 +70,6 @@ struct SharedPrefView: View {
             .foregroundColor(.white)
             .background(Color.green)
         }
-                    
 //        }.onAppear(perform: {
 //            getData()
 //        })
