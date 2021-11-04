@@ -27,6 +27,7 @@ struct EnvironmentObjectView: View {
             .background(Color.green)
             .foregroundColor(.white)
             
+            // share data between views
             EnviourView()
                 .environmentObject(enviourClass)
         }
@@ -34,6 +35,7 @@ struct EnvironmentObjectView: View {
 }
 
 struct EnviourView: View {
+    // share data between views
     @EnvironmentObject var enviourClass: EnviourClass
     
     var body: some View {

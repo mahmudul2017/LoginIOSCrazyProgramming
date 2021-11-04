@@ -15,6 +15,7 @@
 		E941C2D3271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E941C2D2271ECFA9009BF3C6 /* LoginIOSCrazyProgrammingUITests.swift */; };
 		E94F76D42731173100B50BC1 /* EnvironmentObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94F76D32731173100B50BC1 /* EnvironmentObjectView.swift */; };
 		E95F46AE27267E94005556CF /* BindingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95F46AD27267E94005556CF /* BindingView.swift */; };
+		E9908F692733A9E500706577 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9908F682733A9E500706577 /* Calculator.swift */; };
 		E9A87391272164B300857697 /* UserListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A87390272164B300857697 /* UserListPage.swift */; };
 		E9A8739727216AA200857697 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8739627216AA200857697 /* UserModel.swift */; };
 		E9C34353272E6EED00BD40FD /* ExtensionUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C34352272E6EED00BD40FD /* ExtensionUse.swift */; };
@@ -63,6 +64,7 @@
 		E941C2D4271ECFA9009BF3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E94F76D32731173100B50BC1 /* EnvironmentObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectView.swift; sourceTree = "<group>"; };
 		E95F46AD27267E94005556CF /* BindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingView.swift; sourceTree = "<group>"; };
+		E9908F682733A9E500706577 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		E9A87390272164B300857697 /* UserListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListPage.swift; sourceTree = "<group>"; };
 		E9A8739627216AA200857697 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		E9C34352272E6EED00BD40FD /* ExtensionUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUse.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		E941C2B4271ECFA8009BF3C6 /* LoginIOSCrazyProgramming */ = {
 			isa = PBXGroup;
 			children = (
+				E9908F6D2733A9F500706577 /* calculator */,
 				E9CA11BB2730183B00176C5F /* appStorage */,
 				E9CA11B5273017DC00176C5F /* environment */,
 				E9CA11AC2730178E00176C5F /* published */,
@@ -180,6 +183,14 @@
 				E95F46AD27267E94005556CF /* BindingView.swift */,
 			);
 			path = binding;
+			sourceTree = "<group>";
+		};
+		E9908F6D2733A9F500706577 /* calculator */ = {
+			isa = PBXGroup;
+			children = (
+				E9908F682733A9E500706577 /* Calculator.swift */,
+			);
+			path = calculator;
 			sourceTree = "<group>";
 		};
 		E9A8739527216A8400857697 /* model */ = {
@@ -396,6 +407,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9CA11B72730183400176C5F /* EnvironmentView.swift in Sources */,
+				E9908F692733A9E500706577 /* Calculator.swift in Sources */,
 				E941C2B8271ECFA8009BF3C6 /* ContentView.swift in Sources */,
 				E9A87391272164B300857697 /* UserListPage.swift in Sources */,
 				E9EAC0032727C7D3003C6201 /* ContactsList.swift in Sources */,
